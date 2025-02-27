@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumb from "../../components/Breadcrumb.astro";
+import TagCategoryBlock from "../../components/TagCategoryBlock.astro";
 import { getCollection } from "astro:content";
 import type { GetStaticPathsOptions } from "astro";
 import PaginationList from "../../components/PagenationList.svelte";
@@ -8,10 +9,7 @@ import PaginationList from "../../components/PagenationList.svelte";
 export const postsPerPage = 15;
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const allPosts = await getCollection("blog");
-  allPosts.sort(
-    (x, y) =>
-      -new Date(x.data.date).getTime() - new Date(y.data.date).getTime(),
-  );
+  allPosts.sort((x, y) => (Date.parse(y.data.date)) - (Date.parse(x.data.date)));
   return paginate(allPosts, { pageSize: postsPerPage });
 }
 
@@ -24,13 +22,13 @@ const { page } = Astro.props;
     {
       page.data.map((post, i) => {
         let excerpt = post.rendered?.html.split("<!--more-->")[0]
-        excerpt = excerpt?.replace('__ASTRO_IMAGE_="{&#x22;src&#x22;:&#x22;images/', 'src="/_astro/')
-        excerpt = excerpt?.replace('&#x22;,&#x22;alt&#x22;:&#x22;&#x22;,&#x22;index&#x22;:0}', '" alt="')
-        if (i == 0) {
-          console.log(excerpt)
-        }
+        // excerpt = excerpt?.replace('__ASTRO_IMAGE_="{&#x22;src&#x22;:&#x22;images/', 'src="/_astro/')
+        // excerpt = excerpt?.replace('&#x22;,&#x22;alt&#x22;:&#x22;&#x22;,&#x22;index&#x22;:0}', '" alt="')
+        // if (i == 0) {
+        //   console.log(excerpt)
+        // }
         return (
-          <article>
+          <article class="post">
             <header>
               <span class="posted-on">{post.data.date}に投稿</span>
               <h2 class="entry-title">
@@ -50,6 +48,7 @@ const { page } = Astro.props;
                 );
               }
             }}
+          	<TagCategoryBlock data={[{tags: post.data.tags, categories: post.data.categories, type: 'blog'}, {name: post.data.title}]} ></TagCategoryBlock>
           </article>
         );
       })

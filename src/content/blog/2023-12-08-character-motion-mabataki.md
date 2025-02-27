@@ -49,7 +49,7 @@ AEのパペットツールを使って動かします。パーツごとにポジ
 
 完成するとこんな感じ。
 
-\[video width="960" height="540" mp4="https://www.alinco.shop/wp-content/uploads/2023/12/mabataki.mp4"\]\[/video\]
+<!-- \[video width="960" height="540" mp4="https://www.alinco.shop/wp-content/uploads/2023/12/mabataki.mp4"\]\[/video\] -->
 
  
 

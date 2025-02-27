@@ -8,10 +8,7 @@ import PaginationList from "../../components/PagenationList.svelte";
 export const postsPerPage = 15;
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
     const allPosts = await getCollection("product");
-    allPosts.sort(
-        (x, y) =>
-            -new Date(x.data.date).getTime() - new Date(y.data.date).getTime(),
-    );
+    allPosts.sort((x, y) => (Date.parse(y.data.date)) - (Date.parse(x.data.date)));
     return paginate(allPosts, { pageSize: postsPerPage });
 }
 

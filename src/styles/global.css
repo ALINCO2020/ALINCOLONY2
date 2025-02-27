@@ -41,3 +41,17 @@ aside {
     padding-top: 1em;
     border-top: 1px solid rgba(0, 0, 0, .05);
 }
+
+a {
+    word-break: break-all;
+}
+
+.post {
+    margin-bottom: 4.235801032em;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        padding: 0 1em;
+    }
+}
