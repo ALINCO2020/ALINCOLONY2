@@ -18,5 +18,6 @@ export default defineConfig({
   },
 
   integrations: [svelte()],
-  adapter: netlify()
+  adapter: netlify(),
+  output: "static"
 });
