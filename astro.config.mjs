@@ -4,8 +4,6 @@ import rehypeExternalLinks from 'rehype-external-links';
 
 import svelte from '@astrojs/svelte';
 
-import netlify from '@astrojs/netlify';
-
 export default defineConfig({
   markdown: {
       rehypePlugins: [
@@ -18,6 +16,5 @@ export default defineConfig({
   },
 
   integrations: [svelte()],
-  adapter: netlify(),
   output: "static"
 });
