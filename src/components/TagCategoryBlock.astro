@@ -1,0 +1,60 @@
+---
+const { data } = Astro.props;
+---
+
+<aside>
+  {
+    () => {
+      if (data[0].categories != undefined) {
+        return (
+          <div class="cat-links">
+            カテゴリー :{" "}
+            <a
+              href={`/${data[0].type}-categories/${data[0].categories}`}
+              rel="category tag"
+            >
+              {data[0].categories}
+            </a>
+          </div>
+        );
+      }
+    }
+  }
+  {
+    () => {
+      if (data[0].tags != undefined) {
+        return (
+          <div class="tag-links">
+            タグ :{" "}
+            {data[0].tags.map((tag: any) => (
+              <a href={`/${data[0].type}-tags/${tag}`} rel="category tag">
+                {tag}
+              </a>
+            ))}
+          </div>
+        );
+      }
+    }
+  }
+</aside>
+
+<style>
+  li {
+    display: inline;
+  }
+
+  li:not(:first-child)::before {
+    content: ">";
+    padding: 0 4px;
+  }
+
+  span,
+  a {
+    color: #333333;
+  }
+
+  ol {
+    padding-left: 0;
+    margin-bottom: 3em;
+  }
+</style>

@@ -1,0 +1,59 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import { getCollection } from "astro:content";
+import type { GetStaticPathsOptions } from "astro";
+import PaginationList from "../../components/PagenationList.svelte";
+
+export const postsPerPage = 15;
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const allPosts = await getCollection("blog");
+  allPosts.sort(
+    (x, y) =>
+      -new Date(x.data.date).getTime() - new Date(y.data.date).getTime(),
+  );
+  return paginate(allPosts, { pageSize: postsPerPage });
+}
+
+const { page } = Astro.props;
+---
+
+<Layout>
+  <Breadcrumb lists={[{ name: "Blogs" }]} />
+  <main>
+    {
+      page.data.map((post, i) => {
+        let excerpt = post.rendered?.html.split("<!--more-->")[0]
+        excerpt = excerpt?.replace('__ASTRO_IMAGE_="{&#x22;src&#x22;:&#x22;images/', 'src="/_astro/')
+        excerpt = excerpt?.replace('&#x22;,&#x22;alt&#x22;:&#x22;&#x22;,&#x22;index&#x22;:0}', '" alt="')
+        if (i == 0) {
+          console.log(excerpt)
+        }
+        return (
+          <article>
+            <header>
+              <span class="posted-on">{post.data.date}に投稿</span>
+              <h2 class="entry-title">
+                <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+              </h2>
+            </header>
+            <div
+              class="entry-content"
+              set:html={excerpt}
+            />
+            {() => {
+              if (post.rendered?.html.includes("<!--more-->")) {
+                return (
+                  <p>
+                    <a href={`/blog/${post.slug}`}>続きを読む</a>
+                  </p>
+                );
+              }
+            }}
+          </article>
+        );
+      })
+    }
+  </main>
+  <PaginationList {page} />
+</Layout>

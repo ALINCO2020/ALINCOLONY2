@@ -1,0 +1,43 @@
+html {
+    font-family: "Noto Sans JP", "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    background-color: white;
+}
+
+.container {
+    max-width: 66.4989378333em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2.617924em;
+    box-sizing: content-box;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    border-radius: 3px;
+}
+
+.entry-title a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.entry-title {
+    margin-top: 0;
+}
+
+.posted-on {
+    color: #6d6d6d;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+aside {
+    margin: 1.41575em 0 0;
+    margin-bottom: 2.617924em;
+    padding-top: 1em;
+    border-top: 1px solid rgba(0, 0, 0, .05);
+}

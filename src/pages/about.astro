@@ -1,0 +1,131 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+---
+
+<Layout>
+    <Breadcrumb lists={[{ name: "About" }]}/>
+    <div class="profile">
+        <img src="/about-icons/alinco-icon.png" alt="" class="alinco-icon" />
+        <div class="profile-text">
+            <h1 style="font-size: 24px; margin-top: 0; margin-bottom: 0;">
+                ALINCO
+            </h1>
+            <p style="margin-bottom: 0; margin-top: 10px;">
+                MAD & MMV & Motion Graphics & Programming
+            </p>
+        </div>
+    </div>
+    <div class="links">
+        <p>
+            YouTube : <a
+                href="https://www.youtube.com/channel/UC7_4_yN3XSM8HtUISo50xWA"
+                target="_blank"
+                rel="noopener noreferrer">youtube.com/@alinco2020</a>
+        </p>
+        <p>
+            niconico : <a
+                href="https://www.nicovideo.jp/user/89625046"
+                target="_blank"
+                rel="noopener noreferrer">nicovideo.jp/user/89625046</a>
+        </p>
+        <p>
+            Twitter(X) : <a
+                href="https://x.com/ALINCO2020"
+                target="_blank"
+                rel="noopener noreferrer">x.com/ALINCO2020</a>
+        </p>
+        <p>
+            aescripts : <a
+                href="https://aescripts.com/authors/a-b/alinco/"
+                target="_blank"
+                rel="noopener noreferrer">aescripts.com/authors/a-b/alinco</a>
+        </p>
+        <p>
+            Booth : <a
+                href="https://alinco.booth.pm/"
+                target="_blank"
+                rel="noopener noreferrer">alinco.booth.pm</a>
+        </p>
+        <p>
+            GitHub : <a
+                href="https://github.com/ALINCO2020"
+                target="_blank"
+                rel="noopener noreferrer">github.com/ALINCO2020</a>
+        </p>
+        <p>Mail : alinco2020xxx@gmail.com</p>
+    </div>
+    <div class="icons">
+        <a
+            href="https://www.youtube.com/channel/UC7_4_yN3XSM8HtUISo50xWA"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img src="/about-icons/youtube.svg" alt="" class="icon" /></a
+        >
+        <a
+            href="https://www.nicovideo.jp/user/89625046"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img src="/about-icons/niconico.png" alt="" class="icon" /></a
+        >
+        <a
+            href="https://twitter.com/ALINCO2020"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img src="/about-icons/twitter.svg" alt="" class="icon" /></a
+        >
+        <a
+            href="https://aescripts.com/authors/a-b/alinco/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img src="/about-icons/aescripts.png" alt="" class="icon" /></a
+        >
+        <a
+            href="https://alinco.booth.pm/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img src="/about-icons/booth.png" alt="" class="icon" /></a
+        >
+        <a
+            href="https://github.com/ALINCO2020"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img src="/about-icons/github.svg" alt="" class="icon" /></a
+        >
+    </div>
+</Layout>
+
+<style>
+    .profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+
+    .profile-text {
+        margin-left: 16px;
+    }
+
+    .alinco-icon {
+        /* margin-top: 10vh; */
+        width: 80px;
+        height: 80px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .icons {
+        margin-top: 2em;
+        display: flex;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+</style>

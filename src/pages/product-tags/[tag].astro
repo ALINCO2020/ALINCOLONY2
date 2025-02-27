@@ -1,0 +1,53 @@
+---
+import { undefined } from "astro:schema";
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("product");
+  allPosts.sort((x, y) => -new Date(x.data.date).getTime() - new Date(y.data.date).getTime());
+  const uniqueTags = [
+    ...new Set(allPosts.map((post) => post.data.tags).flat()),
+  ];
+
+  const uniqueTagsWithoutUndefined = uniqueTags.filter(
+    (tag: any) => tag !== undefined,
+  );
+
+  return uniqueTagsWithoutUndefined.map((tag: any) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.data.tags?.includes(tag),
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Layout>
+	<Breadcrumb lists={[{ name: "Tags", path: "product-tags" }, {name: tag}]} />
+  <h1>タグ: {tag}</h1>
+  <main>
+    {
+      posts.map((post) => {
+        return (
+          <article>
+            <header>
+              <span class="posted-on">{post.data.date}に投稿</span>
+              <h2 class="entry-title">
+                <a href={`/product/${post.slug}`}>{post.data.title}</a>
+              </h2>
+            </header>
+            <div class="entry-content">{/* <post.Content /> */}</div>
+          </article>
+        );
+      })
+    }
+  </main>
+</Layout>

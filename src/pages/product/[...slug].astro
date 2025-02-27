@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import TagCategoryBlock from "../../components/TagCategoryBlock.astro";
+import { getCollection } from "astro:content";
+// 1. コレクションエントリーごとに新しいパスを生成
+export async function getStaticPaths() {
+	const blogEntries = await getCollection("product");
+	return blogEntries.map((entry) => ({
+		params: { slug: entry.slug },
+		props: { entry },
+	}));
+}
+// 2. テンプレートでは、プロパティからエントリーを直接取得できる
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout>
+	<Breadcrumb lists={[{ name: "Products", path: "product" }, {name: entry.data.title}]} />
+	<h1>{entry.data.title}</h1>
+	<Content />
+	<TagCategoryBlock data={[{tags: entry.data.tags, categories: entry.data.categories, type: 'product'}, {name: entry.data.title}]} >
+</Layout>
