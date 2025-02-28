@@ -112,15 +112,15 @@
 
     .page-numbers li {
         padding: 0.3342343017em 0.875em;
-        background-color: rgba(0, 0, 0, 0.025);
+        background-color: rgba(0, 0, 0, 0.042);
         margin: 0.2em;
     }
 
     .dot {
-        background-color: white !important;
+        background-color: #f5f5f3 !important;
     }
 
     .current {
-        background-color: #dcdcdc !important;
+        background-color: #c6beb9 !important;
     }
 </style>

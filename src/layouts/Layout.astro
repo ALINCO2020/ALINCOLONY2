@@ -11,6 +11,8 @@ import Footer from "../components/Footer.astro";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
+		<meta http-equiv="Content-Language" content="ja" />
+		<meta name="google" content="notranslate" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -25,7 +27,7 @@ import Footer from "../components/Footer.astro";
 			<slot />
 		</div>
 	</body>
-	<Footer></Footer>
+	<Footer />
 </html>
 
 <style>
