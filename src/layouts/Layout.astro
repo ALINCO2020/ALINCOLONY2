@@ -5,7 +5,8 @@ import Footer from "../components/Footer.astro";
 import {siteTitle} from '../config.ts'
 
 const {title, ogpImageURL} = Astro.props;
-const path = Astro.site?.host
+const ogTitle = title + ' | ' + siteTitle
+const socialImageURL = new URL(ogpImageURL, Astro.url);
 ---
 
 <!doctype html>
@@ -17,10 +18,10 @@ const path = Astro.site?.host
 		<meta name="generator" content={Astro.generator} />
 		<meta http-equiv="Content-Language" content="ja" />
 		<meta name="google" content="notranslate" />
-		<meta property="og:title" content={title} />
+		<meta property="og:title" content={ogTitle} />
 		<meta property="og:type" content="website" />
 		<meta property="og:description" content={title} />
-		<meta property="og:image" content={ogpImageURL} />
+		<meta property="og:image" content={socialImageURL.href} />
 		<meta property="og:url" content={Astro.request.url} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
