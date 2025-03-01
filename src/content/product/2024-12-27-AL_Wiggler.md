@@ -1,7 +1,7 @@
 ---
 title: "AL_Wiggler"
 date: "2024-12-27"
-thumbnail: "images-product/AL_Wiggler.png"
+thumbnail: "/images-product/AL_Wiggler.png"
 description: "各プロパティにWiggleエクスプレッションを追加して個別のコントローラーを付けるスクリプト"
 categories: 
   - "script"

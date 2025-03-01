@@ -1,7 +1,7 @@
 ---
 title: "ChangeCompDuration"
 date: "2022-09-09"
-thumbnail: "images-product/ChangeCompDuration.png"
+thumbnail: "/images-product/ChangeCompDuration.png"
 description: "コンポの長さを変更するスクリプト"
 categories: 
   - "script"

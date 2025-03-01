@@ -1,7 +1,7 @@
 ---
 title: "AL_FontStyler"
 date: "2023-07-25"
-thumbnail: "images-product/AL_FontStyler.png"
+thumbnail: "/images-product/AL_FontStyler.png"
 description: "フォントスタイルをコピペするスクリプト"
 categories: 
   - "script"

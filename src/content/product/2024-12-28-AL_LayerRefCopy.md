@@ -1,7 +1,7 @@
 ---
 title: "AL_LayerRefCopy"
 date: "2024-12-27"
-thumbnail: "images-product/AL_LayerRefCopy.png"
+thumbnail: "/images-product/AL_LayerRefCopy.png"
 description: "レイヤー参照プロパティの値を保持したままレイヤーをコピペするスクリプト"
 categories: 
   - "script"

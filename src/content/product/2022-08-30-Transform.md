@@ -1,7 +1,7 @@
 ---
 title: "Transform"
 date: "2022-08-30"
-thumbnail: "images-product/Transform.png"
+thumbnail: "/images-product/Transform.png"
 description: "Utility Boxのトランスフォームを改良"
 categories: 
   - "script"
