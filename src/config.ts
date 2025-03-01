@@ -1,2 +1,2 @@
 export const siteTitle: string = 'ALINCOLONY';
-export const description: string = 'alisan tokotoko.....';
+export const description: string = 'welcome to alinco world.......';
