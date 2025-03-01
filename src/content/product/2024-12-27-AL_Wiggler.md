@@ -19,4 +19,4 @@ UIはないのでKBarなどで呼び出して使ってもらえれば。
 [使い方]  
 wiggleを追加したいプロパティを選択してスクリプトを実行。
 
-[download](/files/AL_WIggler_V1.0.zip "download")
+[download](/files/AL_Wiggler_V1.1.zip "download")
