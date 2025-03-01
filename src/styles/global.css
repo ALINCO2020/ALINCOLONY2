@@ -95,9 +95,11 @@ li {
     text-decoration: none;
 }
 
-.product-container:hover {
-    margin-left: 0.5em;
-    background-color: #ebe9e5;
+@media (hover: hover) and (pointer: fine) {
+    .product-container:hover {
+        margin-left: 0.5em;
+        background-color: #ebe9e5;
+    }
 }
 
 .product-data {
