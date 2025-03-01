@@ -8,7 +8,7 @@ const {title, ogpImageURL, description} = Astro.props;
 const ogTitle = title + ' | ' + siteTitle
 let socialImageURL
 if (ogpImageURL == undefined) {
-	socialImageURL = new URL('favicon.png', siteURL);
+	socialImageURL = new URL('OGP.png', siteURL);
 } else {
 	socialImageURL = new URL(ogpImageURL, siteURL);
 }
