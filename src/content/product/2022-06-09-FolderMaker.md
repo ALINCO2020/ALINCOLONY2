@@ -1,13 +1,15 @@
 ---
 title: "FolderMaker"
 date: "2022-06-09"
+thumbnail: "images-product/FolderMaker.png"
+description: "フォルダーをプリセットとして保存、作成するスクリプト"
 categories: 
   - "script"
 ---
 
 フォルダーをプリセットとして保存、作成するスクリプト
 
-![](images/FolderMaker.png)
+![](/images-product/FolderMaker.png)
 
 # 説明
 [動作環境]  

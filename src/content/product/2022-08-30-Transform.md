@@ -1,6 +1,8 @@
 ---
 title: "Transform"
 date: "2022-08-30"
+thumbnail: "images-product/Transform.png"
+description: "Utility Boxのトランスフォームを改良"
 categories: 
   - "script"
 tags:
@@ -9,7 +11,7 @@ tags:
 
 Utility Boxのトランスフォームを改良
 
-![](images/Transform.png)
+![](/images-product/Transform.png)
 
 # 説明
 使い方はUtility Boxと大体同じ。

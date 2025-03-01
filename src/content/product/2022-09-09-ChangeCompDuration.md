@@ -1,13 +1,15 @@
 ---
 title: "ChangeCompDuration"
 date: "2022-09-09"
+thumbnail: "images-product/ChangeCompDuration.png"
+description: "コンポの長さを変更するスクリプト"
 categories: 
   - "script"
 ---
 
 コンポの長さを変更するスクリプト
 
-![](images/ChangeCompDuration.png)
+![](/images-product/ChangeCompDuration.png)
 
 # 説明
 コンポ内にあるコンポも再帰して全部伸ばしてくれます。詳細は Readme.txt を読んでください。

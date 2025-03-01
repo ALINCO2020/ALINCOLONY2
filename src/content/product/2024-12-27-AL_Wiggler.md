@@ -1,6 +1,8 @@
 ---
 title: "AL_Wiggler"
 date: "2024-12-27"
+thumbnail: "images-product/AL_Wiggler.png"
+description: "各プロパティにWiggleエクスプレッションを追加して個別のコントローラーを付けるスクリプト"
 categories: 
   - "script"
 tags:
@@ -9,7 +11,7 @@ tags:
 
 各プロパティにWiggleエクスプレッションを追加して個別のコントローラーを付けるスクリプト
 
-![](images/AL_Wiggler.png)
+![](/images-product/AL_Wiggler.png)
 
 # 説明
 UIはないのでKBarなどで呼び出して使ってもらえれば。

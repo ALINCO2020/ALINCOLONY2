@@ -8,7 +8,7 @@ import PaginationList from "../../components/PagenationList.svelte";
 export const postsPerPage = 15;
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
     const allPosts = await getCollection("product");
-    allPosts.sort((x, y) => (Date.parse(y.data.date)) - (Date.parse(x.data.date)));
+    allPosts.sort((x, y) => Date.parse(y.data.date) - Date.parse(x.data.date));
     return paginate(allPosts, { pageSize: postsPerPage });
 }
 
@@ -21,20 +21,43 @@ const { page } = Astro.props;
         {
             page.data.map((post) => {
                 return (
-                    <article>
-                        <header>
-                            <span class="posted-on">
-                                {post.data.date}に投稿
-                            </span>
-                            <h2 class="entry-title">
-                                <a href={`/product/${post.slug}`}>
-                                    {post.data.title}
-                                </a>
-                            </h2>
-                        </header>
-                        <div class="entry-content">
-                            {/* <post.Content /> */}
-                        </div>
+                    <article class="product-container">
+                        <a href={`/product/${post.slug}`}>
+                            <img
+                                class="product-thumbnail"
+                                src={post.data.thumbnail}
+                                alt=""
+                            />
+                            <div class="product-data">
+                                <div>
+                                    <span class="product-posted-on">
+                                        {post.data.date}
+                                    </span>
+                                    <h2 class="product-title">
+                                        {post.data.title}
+                                    </h2>
+                                    <p class="product-description">{post.data.description}</p>
+                                    {() => {
+                                        if (post.data.tags == undefined) {
+                                            return (
+                                                <p class="product-category-tag">
+                                                    カテゴリー :{" "}
+                                                    {post.data.categories}
+                                                </p>
+                                            );
+                                        } else {
+                                            return (
+                                                <p class="product-category-tag">
+                                                    カテゴリー :{" "}
+                                                    {post.data.categories} |
+                                                    タグ : {post.data.tags}
+                                                </p>
+                                            );
+                                        }
+                                    }}
+                                </div>
+                            </div>
+                        </a>
                     </article>
                 );
             })

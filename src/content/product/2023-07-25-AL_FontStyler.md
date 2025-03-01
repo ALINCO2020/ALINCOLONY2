@@ -1,6 +1,8 @@
 ---
 title: "AL_FontStyler"
 date: "2023-07-25"
+thumbnail: "images-product/AL_FontStyler.png"
+description: "フォントスタイルをコピペするスクリプト"
 categories: 
   - "script"
 tags:
@@ -9,7 +11,7 @@ tags:
 
 フォントスタイルをコピペするスクリプト
 
-![](images/AL_FontStyler.png)
+![](/images-product/AL_FontStyler.png)
 
 # 説明
 [使い方（Twitterに飛びます）](https://x.com/ALINCO2020/status/1680557800735268865)

@@ -30,7 +30,7 @@ const { page } = Astro.props;
         return (
           <article class="post">
             <header>
-              <span class="posted-on">{post.data.date}に投稿</span>
+              <span class="posted-on">{post.data.date}</span>
               <h2 class="entry-title">
                 <a href={`/blog/${post.slug}`}>{post.data.title}</a>
               </h2>
