@@ -6,7 +6,9 @@ import {siteTitle} from '../config.ts'
 
 const {title, ogpImageURL} = Astro.props;
 const ogTitle = title + ' | ' + siteTitle
-const socialImageURL = new URL(ogpImageURL, Astro.url);
+const canonicalURL = new URL(Astro.url.pathname, 'https://alincolony.com/');
+const socialImageURL = new URL(ogpImageURL, canonicalURL);
+// console.log(socialImageURL.href)
 ---
 
 <!doctype html>
