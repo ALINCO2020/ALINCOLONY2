@@ -1,6 +1,7 @@
 ---
 title: "あなたの合図で善悪は逆さまになる"
 date: "2025-02-10"
+description: "ぼやき"
 thumbnail: "images/2025-02-10-game-changer.png"
 categories: 
   - "mad"
