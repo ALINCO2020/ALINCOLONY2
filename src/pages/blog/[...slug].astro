@@ -14,9 +14,10 @@ export async function getStaticPaths() {
 // 2. テンプレートでは、プロパティからエントリーを直接取得できる
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const firstImageURL = entry.body.split('![](')[1].split(')')[0]
 ---
 
-<Layout title={entry.data.title}>
+<Layout title={entry.data.title} ogpImageURL={firstImageURL} description={entry.data.description}>
 	<Breadcrumb lists={[{ name: "Blogs", path: "blog" }, {name: entry.data.title}]} />
 	<h1>{entry.data.title}</h1>
 	<Content />
