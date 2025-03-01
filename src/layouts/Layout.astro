@@ -2,13 +2,12 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import {siteTitle, description} from '../config.ts'
+import {siteTitle} from '../config.ts'
 
-const {title, ogpImageURL} = Astro.props;
+const {title, ogpImageURL, description} = Astro.props;
 const ogTitle = title + ' | ' + siteTitle
 const canonicalURL = new URL(Astro.url.pathname, 'https://alincolony.com/');
 const socialImageURL = new URL(ogpImageURL, canonicalURL);
-// console.log(socialImageURL.href)
 ---
 
 <!doctype html>
