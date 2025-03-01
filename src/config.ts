@@ -1,2 +1,2 @@
 export const siteTitle: string = 'ALINCOLONY';
-export const description: string = 'welcome to アリの巣';
+export const description: string = '‘0只Ｑ.........';
