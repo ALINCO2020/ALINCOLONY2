@@ -6,7 +6,12 @@ import {siteTitle, siteURL} from '../config.ts'
 const {title, ogpImageURL, description} = Astro.props;
 
 const ogTitle = title + ' | ' + siteTitle
-const socialImageURL = new URL(ogpImageURL, siteURL);
+let socialImageURL
+if (ogpImageURL == undefined) {
+	socialImageURL = new URL('favicon.png', siteURL);
+} else {
+	socialImageURL = new URL(ogpImageURL, siteURL);
+}
 console.log(socialImageURL.href)
 ---
 

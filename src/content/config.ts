@@ -7,6 +7,7 @@ const blogCollection = defineCollection({
       title: z.string(),
       date: z.string(),
       description: z.string().optional(),
+      thumbnail: z.string().optional(),
       categories: z.array(z.string()).optional(),
       tags: z.array(z.string()).optional(),
     })
@@ -16,8 +17,8 @@ const productCollection = defineCollection({
     schema: z.object({
       title: z.string(),
       date: z.string(),
-      thumbnail: z.string(),
       description: z.string(),
+      thumbnail: z.string(),
       categories: z.array(z.string()),
       tags: z.array(z.string()).optional(),
     })
