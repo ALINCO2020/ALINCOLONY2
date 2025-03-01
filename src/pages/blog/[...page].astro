@@ -16,7 +16,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 const { page } = Astro.props;
 ---
 
-<Layout>
+<Layout title="Blogs">
   <Breadcrumb lists={[{ name: "Blogs" }]} />
   <main>
     {

@@ -30,7 +30,7 @@ const { category } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<Layout>
+<Layout title=`Category:${category}`>
 	<Breadcrumb lists={[{ name: "Categories", path: "blog-categories" }, {name: category}]} />
   <h1>カテゴリー: {category}</h1>
   <main>

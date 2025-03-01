@@ -29,7 +29,7 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<Layout>
+<Layout title=`Tag:${tag}`>
 	<Breadcrumb lists={[{ name: "Tags", path: "product-tags" }, {name: tag}]} />
   <h1>タグ: {tag}</h1>
   <main>

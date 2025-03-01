@@ -16,7 +16,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Layout>
+<Layout title={entry.data.title}>
 	<Breadcrumb lists={[{ name: "Products", path: "product" }, {name: entry.data.title}]} />
 	<h1>{entry.data.title}</h1>
 	<Content />
