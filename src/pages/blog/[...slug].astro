@@ -15,8 +15,8 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 let firstImageURL
-if (entry.body.includes('![](../../images') == true) {
-	firstImageURL = "_astro" + entry.body.split('![](../../images')[1].split(')')[0]
+if (entry.body.includes('![](') == true) {
+	firstImageURL = entry.body.split('![](')[1].split(')')[0]
 }
 // console.log(firstImageURL)
 ---
