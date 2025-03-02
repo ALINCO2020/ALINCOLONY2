@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import Breadcrumb from "../../components/Breadcrumb.astro";
 import TagCategoryBlock from "../../components/TagCategoryBlock.astro";
+import PostDataBlock from "../../components/PostDataBlock.astro";
 import { getCollection } from "astro:content";
 // 1. コレクションエントリーごとに新しいパスを生成
 export async function getStaticPaths() {
@@ -16,9 +17,42 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Layout title={entry.data.title} ogpImageURL={entry.data.thumbnail} description={entry.data.description}>
-	<Breadcrumb lists={[{ name: "Products", path: "product" }, {name: entry.data.title}]} />
-	<h1>{entry.data.title}</h1>
-	<Content />
-	<TagCategoryBlock data={[{tags: entry.data.tags, categories: entry.data.categories, type: 'product'}, {name: entry.data.title}]} >
+<Layout
+	title={entry.data.title}
+	ogpImageURL={entry.data.thumbnail}
+	description={entry.data.description}
+>
+	<main>
+		<Breadcrumb
+			lists={[
+				{ name: "Products", path: "product" },
+				{ name: entry.data.title },
+			]}
+		/>
+
+		<PostDataBlock
+			type="product"
+			date={entry.data.date}
+			categories={entry.data.categories}
+			tags={entry.data.tags}
+			title={entry.data.title}
+		/>
+		<Content />
+		<!-- <TagCategoryBlock
+		data={[
+			{
+				tags: entry.data.tags,
+				categories: entry.data.categories,
+				type: "product",
+			},
+			{ name: entry.data.title },
+		]}
+	/> -->
+	</main>
 </Layout>
+
+<style>
+	main {
+		margin-bottom: 4em;
+	}
+</style>

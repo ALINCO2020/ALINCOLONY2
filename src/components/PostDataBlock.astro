@@ -1,0 +1,151 @@
+---
+const { type, date, categories, tags, title } = Astro.props;
+---
+
+<div class="top">
+  <div class="data">
+    <div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-week"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"
+        ></path><path d="M16 3v4"></path><path d="M8 3v4"></path><path
+          d="M4 11h16"></path><path d="M7 14h.013"></path><path
+          d="M10.01 14h.005"></path><path d="M13.01 14h.005"></path><path
+          d="M16.015 14h.005"></path><path d="M13.015 17h.005"></path><path
+          d="M7.01 17h.005"></path><path d="M10.01 17h.005"></path></svg
+      >
+      <span class="posted-on">{date}</span>
+    </div>
+    {
+      () => {
+        if (categories != undefined) {
+          return (
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-category"
+              >
+                <>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M4 4h6v6h-6z" />
+                  <path d="M14 4h6v6h-6z" />
+                  <path d="M4 14h6v6h-6z" />
+                  <path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                </>
+              </svg>
+              <span>
+                <a class="head-cat" href={`/${type}-categories/${categories}`}>
+                  #{categories}
+                </a>
+              </span>
+            </div>
+          );
+        }
+      }
+    }
+    {
+      () => {
+        if (tags != undefined) {
+          return (
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-tag"
+              >
+                <>
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M7.5 7.5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+                  <path d="M3 6v5.172a2 2 0 0 0 .586 1.414l7.71 7.71a2.41 2.41 0 0 0 3.408 0l5.592 -5.592a2.41 2.41 0 0 0 0 -3.408l-7.71 -7.71a2 2 0 0 0 -1.414 -.586h-5.172a3 3 0 0 0 -3 3z" />
+                </>
+              </svg>
+              <span>
+                <a class="head-tag" href={`/${type}-tags/${tags}`}>
+                  #{tags}
+                </a>
+              </span>
+            </div>
+          );
+        }
+      }
+    }
+  </div>
+  <h1 class="title">{title}</h1>
+</div>
+
+<style>
+  .title {
+    font-size: 1.8em;
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+  }
+
+  .head-cat,
+  .head-tag {
+    color: #727272;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+
+  .head-cat {
+    margin-right: 0.3em;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .head-cat:hover,
+    .head-tag:hover {
+      color: #a5a5a5;
+    }
+  }
+
+  .posted-on {
+    margin-right: 0.5em;
+  }
+
+  .data {
+    display: flex;
+    gap: 0.5em;
+  }
+
+  .data div {
+    display: flex;
+  }
+
+  .icon {
+    margin-right: 0.3em;
+    stroke: #727272;
+  }
+
+  @media screen and (max-width: 767px) {
+    .head-cat,
+    .head-tag {
+      text-decoration: underline;
+    }
+  }
+</style>
