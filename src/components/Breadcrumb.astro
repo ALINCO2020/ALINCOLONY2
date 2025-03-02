@@ -29,18 +29,25 @@ interface ListItem {
     li {
         display: inline;
     }
-    
+
     li:not(:first-child)::before {
         content: ">";
         padding: 0 4px;
     }
 
-    span, a {
+    span,
+    a {
         color: #333333;
     }
 
     .bread-ol {
-        padding-left: 0 ;
+        padding-left: 0;
         margin: 1em 0 3em 0;
+    }
+
+    @media screen and (max-width: 767px) {
+        .bread-ol {
+            margin-bottom: 1.5em;
+        }
     }
 </style>
