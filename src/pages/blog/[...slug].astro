@@ -34,7 +34,7 @@ const { Content } = await entry.render();
       title={entry.data.title}
     />
     <Content />
-    <SnsShare url={Astro.request.url} title={entry.data.title} />
+    <SnsShare url={Astro.url.pathname} title={entry.data.title} />
   </main>
 </Layout>
 
