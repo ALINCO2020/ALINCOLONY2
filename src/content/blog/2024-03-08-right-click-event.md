@@ -7,7 +7,7 @@ tags:
   - "script"
 ---
 
-```
+```javascript
 btn.addEventListener('click', function() {
   // ここが右クリックの処理になる
 })

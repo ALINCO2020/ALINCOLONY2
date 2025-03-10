@@ -9,7 +9,7 @@ tags:
 
 ExtendScriptでは使えないので正規表現を使う。
 
-```
+```javascript
 text.replaceAll('$', '') // replaceAll の場合
 text.replace(/\$/g, '') // replace の場合
 ```

@@ -9,7 +9,7 @@ tags:
 
 matchNameが一致するプロパティを再帰で全部返す。何かと便利。
 
-```
+```javascript
 /**
  * 特定のプロパティを返す
  * @param {*} rootObj レイヤーでもコンテンツでもOK

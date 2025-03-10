@@ -16,7 +16,7 @@ https://twitter.com/ALINCO2020/status/1877327428147724429
 
 ↓終了点
 
-```
+```javascript
 var size = thisProperty.propertyGroup(1).propertyGroup(1)(1)(2); // 長方形パスのサイズを取得できればなんでもいい
 var x = size[0];
 var y = size[1];
@@ -26,7 +26,7 @@ value * ratio + 100 * (1 - ratio) / 2;
 
 ↓オフセット
 
-```
+```javascript
 var end = thisProperty.propertyGroup(1)(2); // パスのトリミングの終了点を取得できればなんでもいい
 var size = thisProperty.propertyGroup(1).propertyGroup(1)(1)(2); // 長方形パスのサイズを取得できればなんでもいい
 var x = size[0];
@@ -40,7 +40,7 @@ var trueEndValue = (end - 100 * (1 - ratio) / 2) / ratio;
 
 ↓終了点
 
-```
+```javascript
 var size = thisProperty.propertyGroup(1).propertyGroup(1)(1)(2); // 長方形パスのサイズを取得できればなんでもいい
 var x = size[0];
 var y = size[1];
@@ -50,7 +50,7 @@ value * ratio + 100 * (1 - ratio) / 2;
 
 ↓オフセット
 
-```
+```javascript
 var end = thisProperty.propertyGroup(1)(2); // パスのトリミングの終了点を取得できればなんでもいい
 var size = thisProperty.propertyGroup(1).propertyGroup(1)(1)(2); // 長方形パスのサイズを取得できればなんでもいい
 var x = size[0];

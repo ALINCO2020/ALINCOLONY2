@@ -4,6 +4,7 @@ import Breadcrumb from "../../components/Breadcrumb.astro";
 import PostDataBlock from "../../components/PostDataBlock.astro";
 import SnsShare from "../../components/SnsShare.astro";
 import { getCollection } from "astro:content";
+
 // 1. コレクションエントリーごとに新しいパスを生成
 export async function getStaticPaths() {
   const blogEntries = await getCollection("blog");

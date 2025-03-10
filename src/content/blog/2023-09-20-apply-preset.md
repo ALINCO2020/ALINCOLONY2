@@ -7,7 +7,7 @@ tags:
   - "script"
 ---
 
-```
+```javascript
 var ffxFile = File((new File($.fileName)).parent.toString() + "/fugafuga/hogehoge.ffx");
 layer.applyPreset(ffxFile);
 ```

@@ -9,7 +9,7 @@ tags:
 
 ファイルの存在を確認。ファイルの保存・読み込み。ファイル扱うスクリプトは毎回頭にこれ書けばいいかも。
 
-```
+```javascript
 var dataPath = Folder.decode(Folder.userData) + '/Aescripts/YourScriptName';
 var f = new Folder(dataPath);
 if (!f.exists) f.create();
@@ -51,9 +51,7 @@ if (!fileExist('settings')) {
 ```
 
 # 更新記録
-
 - 2024/12/20（金）
-    - writeFile関数に改行をなくす処理を追加
-
+  - writeFile関数に改行をなくす処理を追加
 - 2024/12/21（土）
-    - 拡張子をtxtからjsonに
+  - 拡張子をtxtからjsonに

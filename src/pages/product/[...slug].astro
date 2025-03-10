@@ -37,6 +37,15 @@ const { Content } = await entry.render();
 			tags={entry.data.tags}
 			title={entry.data.title}
 		/>
+		<div class="top-block">
+			<img class="product-image" src={entry.data.thumbnail} alt="" />
+			<div class="product-info">
+				<h1 class="title">{entry.data.title}</h1>
+				<p style="margin-bottom: 2em;">{entry.data.description}</p>
+				<a class="button" href={entry.data.downloadLink}>download</a>
+			</div>
+		</div>
+		<h2>説明</h2>
 		<Content />
 		<SnsShare url={Astro.url.pathname} title={entry.data.title} />
 	</main>
@@ -45,5 +54,50 @@ const { Content } = await entry.render();
 <style>
 	main {
 		margin-bottom: 4em;
+	}
+
+	.top-block {
+		display: flex;
+	}
+
+	.product-image {
+		width: 50%;
+		height: 250px;
+		object-fit: cover;
+		margin-right: 2em;
+	}
+
+	.title {
+		margin: 0;
+	}
+
+	.button {
+		background-color: #e9b806;
+		border-radius: 6px;
+
+		padding: 8px 30px;
+		line-height: 20px;
+		cursor: pointer;
+		color: white;
+		font-size: 16px;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.button:hover {
+		opacity: 80%;
+	}
+
+	@media screen and (max-width: 767px) {
+		.top-block {
+			display: block;
+		}
+
+		.product-image {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+			margin-bottom: 1em;
+		}
 	}
 </style>

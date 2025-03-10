@@ -19,6 +19,7 @@ const productCollection = defineCollection({
       date: z.string(),
       description: z.string(),
       thumbnail: z.string(),
+      downloadLink: z.string(),
       categories: z.array(z.string()),
       tags: z.array(z.string()).optional(),
     })

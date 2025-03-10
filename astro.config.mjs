@@ -4,6 +4,8 @@ import rehypeExternalLinks from 'rehype-external-links';
 
 import svelte from '@astrojs/svelte';
 
+import expressiveCode from 'astro-expressive-code';
+
 export default defineConfig({
   markdown: {
       rehypePlugins: [
@@ -15,6 +17,6 @@ export default defineConfig({
       ]
   },
 
-  integrations: [svelte()],
+  integrations: [svelte(), expressiveCode()],
   output: "static"
 });

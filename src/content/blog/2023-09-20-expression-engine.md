@@ -11,6 +11,6 @@ tags:
 
 プロジェクト設定は取得できるので、以前のExtendScriptが選択されている場合は警告を出して処理を停止させるとかが良いと思う。
 
-```
+```javascript
 app.project.expressionEngine
 ```

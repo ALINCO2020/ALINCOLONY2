@@ -11,7 +11,7 @@ jsonの中身を見てみると、改行が挟まれてる。俺のスクリプ�
 
 つまりjson書き出しの部分が悪い。以下のコードのように改行をなくしてから書き出せばOK。
 
-```
+```javascript
 function writeFile(object, filename) {
   var myFile = new File(dataPath + "/" + filename + ".json");
   myFile.open("w");

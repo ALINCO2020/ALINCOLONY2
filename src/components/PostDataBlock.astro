@@ -95,14 +95,23 @@ const { type, date, categories, tags, title } = Astro.props;
       }
     }
   </div>
-  <h1 class="title">{title}</h1>
+  {
+    () => {
+      if (type == "blog") {
+        return <h1 class="title">{title}</h1>;
+      }
+    }
+  }
 </div>
 
 <style>
+  .top {
+    margin-bottom: 1em;
+  }
+
   .title {
     font-size: 1.8em;
     margin-top: 0.2em;
-    margin-bottom: 1em;
   }
 
   .head-cat,

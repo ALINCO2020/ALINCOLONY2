@@ -3,15 +3,11 @@ title: "ChangeCompDuration"
 date: "2022-09-09"
 thumbnail: "/images-product/ChangeCompDuration.png"
 description: "コンポの長さを変更するスクリプト"
+downloadLink: "/files/ChangeCompDuration_V1.1.zip"
 categories: 
   - "script"
 ---
 
-コンポの長さを変更するスクリプト
-
-![](/images-product/ChangeCompDuration.png)
-
-# 説明
 コンポ内にあるコンポも再帰して全部伸ばしてくれます。詳細は Readme.txt を読んでください。
 
 [動作環境]  
@@ -23,5 +19,3 @@ V1.1 (2023-06-07)
 - 「現在の時間まで」モードのときに親コンポとフレームレートが違ったら実行しないように
 - ロックされたレイヤーがあると停止してしまうバグを修正
 - 「現在の時間まで」モードで実行したらoutPointを現在の時間に設定するように
-
-[download](/files/ChangeCompDuration_V1.1.zip "download")

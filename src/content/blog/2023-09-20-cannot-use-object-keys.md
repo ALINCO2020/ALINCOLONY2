@@ -9,7 +9,7 @@ tags:
 
 こんな関数を用意してやる。
 
-```
+```javascript
 var getKeys = function(associativeArrayObject) {
   var arrayWithKeys=[], associativeArrayObject;
   for (key in associativeArrayObject) {

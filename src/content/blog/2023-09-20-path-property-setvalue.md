@@ -7,7 +7,7 @@ tags:
   - "script"
 ---
 
-```
+```javascript
 // pathプロパティ取得
 var path = hogehoge.property()
 // Shapeオブジェクトのインスタンス作成

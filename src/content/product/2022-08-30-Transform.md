@@ -3,17 +3,13 @@ title: "Transform"
 date: "2022-08-30"
 thumbnail: "/images-product/Transform.png"
 description: "Utility Boxのトランスフォームを改良"
+downloadLink: "/files/Transform_V1.8.zip"
 categories: 
   - "script"
 tags:
   - "OSS"
 ---
 
-Utility Boxのトランスフォームを改良
-
-![](/images-product/Transform.png)
-
-# 説明
 使い方はUtility Boxと大体同じ。
 
 - UI変更
@@ -36,5 +32,3 @@ OS : Windows10 Mac
 
 [ソースコード]  
 [https://github.com/ALINCO2020/Transform.jsx](https://github.com/ALINCO2020/Transform.jsx)
-
-[download](/files/Transform_V1.8.zip "download")

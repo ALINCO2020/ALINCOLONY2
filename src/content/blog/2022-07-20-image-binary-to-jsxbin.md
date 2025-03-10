@@ -7,7 +7,7 @@ tags:
   - "script"
 ---
 
-```
+```javascript
 var f = File("画像ファイルパス");
 f.encoding = 'BINARY'
 f.open('e');

@@ -7,7 +7,7 @@ tags:
   - "script"
 ---
 
-```
+```javascript
 window.onClose = function () {return false}
 ```
 

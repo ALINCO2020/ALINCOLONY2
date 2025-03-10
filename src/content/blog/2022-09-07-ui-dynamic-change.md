@@ -7,7 +7,7 @@ tags:
   - "script"
 ---
 
-```
+```javascript
 function updateUILayout(container) {
   try {
     container.layout.layout();

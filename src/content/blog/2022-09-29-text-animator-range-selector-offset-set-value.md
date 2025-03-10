@@ -7,7 +7,7 @@ tags:
   - "script"
 ---
 
-```
+```javascript
 var animator1 = selectedLayer.Text.Animators.addProperty("ADBE Text Animator");
 var selector1 = animator1.property("ADBE Text Selectors").addProperty("ADBE Text Selector"); // 範囲セレクターを追加
 selector1.advanced.units.setValue(2) // 高度タブの単位を一旦「インデックス」に

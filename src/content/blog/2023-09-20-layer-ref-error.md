@@ -9,7 +9,7 @@ tags:
 
 スクリプトからSourceTextのスタイルをいじろうとした時に出たエラー。TypeAnimeJP開発中に追加テキストを左揃え固定にしようとしたときに遭遇。
 
-```
+```javascript
 // 左揃えに
 var tmpTextDocument = tmpTextLayer.property("Source Text").value
 tmpTextDocument.justification = ParagraphJustification.LEFT_JUSTIFY

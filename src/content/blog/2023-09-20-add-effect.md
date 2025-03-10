@@ -11,7 +11,7 @@ tags:
 
 例えばスライダー制御ならこんな感じ。
 
-```
+```javascript
 var slider = layer.effect.addProperty("ADBE Slider Control")
 ```
 
