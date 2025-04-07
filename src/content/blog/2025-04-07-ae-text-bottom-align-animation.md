@@ -28,19 +28,19 @@ tags:
 いいい\n
 うう\n
 ええええ\n
-おおおおお\n
+おおおおお
 ```
 
 改行を無くして1行にする。
 
 ```
-ああああ\nいいい\nうう\nええええ\nおおおおお\n
+ああああ\nいいい\nうう\nええええ\nおおおおお
 ```
 
 空のテキストレイヤーを作成し、ソーステキストに以下のエクスプレッションを書く。（text変数にさっきのテキストをぶち込む）
 
 ```javascript
-var text = "ああああ\nいいい\nうう\nええええ\nおおおおお\n";
+var text = "ああああ\nいいい\nうう\nええええ\nおおおおお";
 ```
 
 スライダー制御エフェクトを追加して、その値を取得するエクスプレッションを追記。  
@@ -80,7 +80,7 @@ var r = thisLayer.sourceRectAtTime(time - thisLayer.startTime, true);
 ソーステキスト
 
 ```javascript
-var text = "ああああ\nいいい\nうう\nええええ\nおおおおお\n";
+var text = "ああああ\nいいい\nうう\nええええ\nおおおおお";
 var s = Math.round(effect("スライダー制御")("スライダー"));
 text.slice(0, s);
 ```
