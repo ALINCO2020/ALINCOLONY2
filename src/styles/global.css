@@ -166,3 +166,30 @@ li {
         margin-bottom: 0.5em;
     }
 }
+
+blockquote {
+    color: #7f7f7f;
+    background-color: #eaeaea;
+    padding: 8px 16px;
+    position: relative;
+    margin: 24px 0;
+}
+
+blockquote::before {
+    background-color: #c5c5c5;
+    border-radius: 4px;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 4px;
+}
+
+blockquote>:last-child {
+    margin-bottom: 0;
+}
+
+blockquote>:first-child {
+    margin-top: 0;
+}
