@@ -3,7 +3,7 @@ title: "AL_UnPrecomp"
 date: "2025-05-19"
 thumbnail: "/images-product/AL_UnPrecomp.png"
 description: "プリコンポジションを展開するスクリプト"
-downloadLink: "/files/AL_UnPrecomp_V1.1.zip"
+downloadLink: "/files/AL_UnPrecomp_V1.2.zip"
 categories: 
   - "script"
 tags:
@@ -21,3 +21,5 @@ hatino氏のUnPrecomposerのコードをベースに処理を書き加えまし�
 [更新履歴]  
 - V1.1 (2025-06-03)
   - 親子付けとトラックマットの設定を保持できるように
+- V1.2（2025-06-11）
+  - プリコンポジション内に0秒より前のinPointを持つレイヤーがあった場合も正しく時間を合わせるように
