@@ -3,7 +3,7 @@ title: "AL_Wiggler"
 date: "2024-12-27"
 thumbnail: "/images-product/AL_Wiggler.png"
 description: "各プロパティにwiggleエクスプレッションを追加して個別のコントローラーを付けるスクリプト"
-downloadLink: "/files/AL_Wiggler_V1.2.zip"
+downloadLink: "/files/AL_Wiggler_V1.3.zip"
 categories: 
   - "script"
 tags:
@@ -21,3 +21,5 @@ UIはないのでKBarなどで呼び出して使ってもらえれば。
 - V1.2 (2025-03-25)
   - エフェクトのプロパティに対しても動くように
   - 複数回に分けて適用しても動くように
+- V1.3（2025-06-16）
+  - ffxの適用を1回だけにして処理を高速化
