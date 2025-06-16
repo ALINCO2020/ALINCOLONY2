@@ -2,13 +2,13 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import {siteTitle, siteURL} from '../config.ts'
-const {title, ogpImageURL, description} = Astro.props;
+import { siteTitle, siteURL } from "../config.ts";
+const { title, ogpImageURL, description } = Astro.props;
 
-const ogTitle = title + ' | ' + siteTitle
-let socialImageURL
+const ogTitle = title + " | " + siteTitle;
+let socialImageURL;
 if (ogpImageURL == undefined) {
-	socialImageURL = new URL('OGP.png', siteURL);
+	socialImageURL = new URL("OGP.png", siteURL);
 } else {
 	socialImageURL = new URL(ogpImageURL, siteURL);
 }
@@ -47,15 +47,37 @@ if (ogpImageURL == undefined) {
 		<div class="container">
 			<slot />
 		</div>
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"
+		></script>
+		<script is:inline>
+			window.twttr = window.twttr || {};
+			window.twttr.ready = function (callback) {
+				if (window.twttr.widgets) {
+					callback(window.twttr);
+				} else {
+					const interval = setInterval(() => {
+						if (window.twttr.widgets) {
+							clearInterval(interval);
+							callback(window.twttr);
+						}
+					}, 50);
+				}
+			};
+
+			window.twttr.ready((twttr) => {
+				twttr.widgets.load();
+			});
+		</script>
 	</body>
 	<Footer />
-</html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+	<style>
+		html,
+		body {
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+
+</html>
