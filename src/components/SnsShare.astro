@@ -2,12 +2,13 @@
 const { url, title } = Astro.props;
 import {siteURL} from '../config.ts'
 const socialURL = new URL(url, siteURL);
+const encodedTitle = encodeURIComponent(title);
 ---
 
 <div class="sns-share">
   <a
     class="tw_share"
-    href=`https://twitter.com/intent/tweet?url=${socialURL.href}&text=${title}`
+    href=`https://twitter.com/intent/tweet?url=${socialURL.href}&text=${encodedTitle}`
     target="_blank"
     rel="nofollow noopener noreferrer"
   >
