@@ -2,7 +2,7 @@
 title: "初期衝動の終わり"
 date: "2025-07-23"
 description: "もっと気高く飢えなければ"
-thumbnail: "images/2025-07-23-neverland.webp"
+thumbnail: "images/2025-07-23-initial-impulse.webp"
 categories: 
   - "mad"
 ---
